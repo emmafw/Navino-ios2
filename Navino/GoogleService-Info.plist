@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+        <string>ca-app-pub-3940256099942544/2934735716</string>
+        <key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+        <string>ca-app-pub-3940256099942544/4411468910</string>
+        <key>CLIENT_ID</key>
+        <string>927854013332-tlftl9achl6t134a6cf61k7b9c5u1nqn.apps.googleusercontent.com</string>
+        <key>REVERSED_CLIENT_ID</key>
+        <string>com.googleusercontent.apps.927854013332-tlftl9achl6t134a6cf61k7b9c5u1nqn</string>
+        <key>API_KEY</key>
+        <string>AIzaSyDWw9KfbaLOB1a14fgJEk8rEmAlhIrm1Zs</string>
+        <key>GCM_SENDER_ID</key>
+        <string>927854013332</string>
+        <key>PLIST_VERSION</key>
+        <string>1</string>
+        <key>BUNDLE_ID</key>
+        <string>Navino.Navino</string>
+        <key>PROJECT_ID</key>
+        <string>driveappeal-5a064</string>
+        <key>STORAGE_BUCKET</key>
+        <string>driveappeal-5a064.appspot.com</string>
+        <key>IS_ADS_ENABLED</key>
+        <true></true>
+        <key>IS_ANALYTICS_ENABLED</key>
+        <false></false>
+        <key>IS_APPINVITE_ENABLED</key>
+        <false></false>
+        <key>IS_GCM_ENABLED</key>
+        <true></true>
+        <key>IS_SIGNIN_ENABLED</key>
+        <true></true>
+        <key>GOOGLE_APP_ID</key>
+        <string>1:927854013332:ios:10b69e0b57c4b772</string>
+        <key>DATABASE_URL</key>
+        <string>https://driveappeal-5a064.firebaseio.com</string>
+    </dict>
+</plist>

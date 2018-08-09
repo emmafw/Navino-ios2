@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		749948F3433AE552028803EA /* Pods_Navino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1822FFB2E9BD3CCDACF1BA0 /* Pods_Navino.framework */; };
 		B542129620F5044700D0F5F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B542129520F5044700D0F5F1 /* AppDelegate.swift */; };
 		B542129820F5044700D0F5F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B542129720F5044700D0F5F1 /* ViewController.swift */; };
 		B542129B20F5044700D0F5F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B542129920F5044700D0F5F1 /* Main.storyboard */; };
 		B542129D20F5046600D0F5F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B542129C20F5046600D0F5F1 /* Assets.xcassets */; };
 		B54212A020F5046600D0F5F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B542129E20F5046600D0F5F1 /* LaunchScreen.storyboard */; };
+		B5D7381A20FE2EA0008D1EE4 /* drawingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7381920FE2EA0008D1EE4 /* drawingPanel.swift */; };
+		B5FD7617210658B8002CB51D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5FD7616210658B8002CB51D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6680BFF381E5578A16E443E6 /* Pods-Navino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Navino.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Navino/Pods-Navino.debug.xcconfig"; sourceTree = "<group>"; };
+		6E1A5AA7036695AB3D752EC7 /* Pods-Navino.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Navino.release.xcconfig"; path = "Pods/Target Support Files/Pods-Navino/Pods-Navino.release.xcconfig"; sourceTree = "<group>"; };
 		B542129220F5044700D0F5F1 /* Navino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B542129520F5044700D0F5F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B542129720F5044700D0F5F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		B542129C20F5046600D0F5F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B542129F20F5046600D0F5F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B54212A120F5046600D0F5F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D7381920FE2EA0008D1EE4 /* drawingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawingPanel.swift; sourceTree = "<group>"; };
+		B5FD7616210658B8002CB51D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D1822FFB2E9BD3CCDACF1BA0 /* Pods_Navino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Navino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				749948F3433AE552028803EA /* Pods_Navino.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				B542129420F5044700D0F5F1 /* Navino */,
 				B542129320F5044700D0F5F1 /* Products */,
+				D64F80E2F1B571830F5A8BAD /* Pods */,
+				BF9C10B1FF2C9C4A811FF21D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +71,27 @@
 				B542129C20F5046600D0F5F1 /* Assets.xcassets */,
 				B542129E20F5046600D0F5F1 /* LaunchScreen.storyboard */,
 				B54212A120F5046600D0F5F1 /* Info.plist */,
+				B5D7381920FE2EA0008D1EE4 /* drawingPanel.swift */,
+				B5FD7616210658B8002CB51D /* GoogleService-Info.plist */,
 			);
 			path = Navino;
+			sourceTree = "<group>";
+		};
+		BF9C10B1FF2C9C4A811FF21D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1822FFB2E9BD3CCDACF1BA0 /* Pods_Navino.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D64F80E2F1B571830F5A8BAD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6680BFF381E5578A16E443E6 /* Pods-Navino.debug.xcconfig */,
+				6E1A5AA7036695AB3D752EC7 /* Pods-Navino.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B54212A420F5046600D0F5F1 /* Build configuration list for PBXNativeTarget "Navino" */;
 			buildPhases = (
+				0F80FB39DD20BE0D9D422AA4 /* [CP] Check Pods Manifest.lock */,
 				B542128E20F5044700D0F5F1 /* Sources */,
 				B542128F20F5044700D0F5F1 /* Frameworks */,
 				B542129020F5044700D0F5F1 /* Resources */,
+				A9A3D3503A4BCC5351DF27FA /* [CP] Embed Pods Frameworks */,
+				2B70089FD071A12274897005 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B54212A020F5046600D0F5F1 /* LaunchScreen.storyboard in Resources */,
+				B5FD7617210658B8002CB51D /* GoogleService-Info.plist in Resources */,
 				B542129D20F5046600D0F5F1 /* Assets.xcassets in Resources */,
 				B542129B20F5044700D0F5F1 /* Main.storyboard in Resources */,
 			);
@@ -130,11 +164,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F80FB39DD20BE0D9D422AA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Navino-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B70089FD071A12274897005 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Navino/Pods-Navino-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Navino/Pods-Navino-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9A3D3503A4BCC5351DF27FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Navino/Pods-Navino-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GooglePlacesSearchController/GooglePlacesSearchController.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesSearchController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Navino/Pods-Navino-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B542128E20F5044700D0F5F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D7381A20FE2EA0008D1EE4 /* drawingPanel.swift in Sources */,
 				B542129820F5044700D0F5F1 /* ViewController.swift in Sources */,
 				B542129620F5044700D0F5F1 /* AppDelegate.swift in Sources */,
 			);
@@ -278,9 +388,11 @@
 		};
 		B54212A520F5046600D0F5F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6680BFF381E5578A16E443E6 /* Pods-Navino.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H8R64N625H;
 				INFOPLIST_FILE = Navino/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,9 +407,11 @@
 		};
 		B54212A620F5046600D0F5F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E1A5AA7036695AB3D752EC7 /* Pods-Navino.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H8R64N625H;
 				INFOPLIST_FILE = Navino/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

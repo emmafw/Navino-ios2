@@ -1,0 +1,6 @@
+framework module Pods_Navino {
+  umbrella header "Pods-Navino-umbrella.h"
+
+  export *
+  module * { export * }
+}
