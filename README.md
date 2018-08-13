@@ -11,7 +11,7 @@ To download the app to an iPhone, an Apple Developers License is required.
 Follow these directions to allow the application to be installed.
 https://ioscodesigning.com/generating-code-signing-files/
 
-If running Navino on a simulator comment out lines 124 and 125 before running. 
+If running Navino on a simulator comment out lines 247 and 248 before running. Not doing so will cause the build to fail. 
 These lines deal with the user's current location using CoreLocation and do not work on a simuator due to how current location
 is simulated.
 Directions features will also not work in the simulator as directions update based on user's current location which does not
