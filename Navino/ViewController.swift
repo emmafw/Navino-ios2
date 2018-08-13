@@ -244,8 +244,8 @@ class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManager
         self.googleMaps.padding = paddingValues
         self.googleMaps.settings.compassButton = true
         self.googleMaps.settings.zoomGestures = true
-        //let camera = GMSCameraPosition(target: (locationManager.location?.coordinate)!, zoom: 15, bearing: 0, viewingAngle: 0)
-        //self.googleMaps.animate(to: camera)
+        let camera = GMSCameraPosition(target: (locationManager.location?.coordinate)!, zoom: 15, bearing: 0, viewingAngle: 0)
+        self.googleMaps.animate(to: camera)
         
     }
     
