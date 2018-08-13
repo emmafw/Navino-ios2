@@ -18,3 +18,8 @@ Directions features will also not work in the simulator as directions update bas
 update on the simulator. 
 
 Once the app is installed the user will be required to sign in using a Google account.
+
+Repositories used for assistance:
+https://github.com/anishparajuli555/FreeHandMapDrawing/tree/master/FreeHandDrawingInMap
+https://github.com/balitax/AutoCompleteAddressMaps
+https://github.com/balitax/Google-Maps-Direction
