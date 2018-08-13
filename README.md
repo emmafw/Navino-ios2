@@ -6,6 +6,8 @@ This repository is the ios appication, android can be found at https://github.co
 
 To install this application xcode must be installed.
 Download the repository and in terminal run pod install to install all dependencies outlined in the podfile.
+The user will need to get a Google Maps API Key from https://developers.google.com/maps/documentation/ios-sdk/get-api-key
+Paste the API key into the AppDelegate for the variable APIKEY.
 
 To download the app to an iPhone, an Apple Developers License is required.
 Follow these directions to allow the application to be installed.
