@@ -17,10 +17,6 @@ import AVFoundation
 import Firebase
 import GoogleSignIn
 
-enum Location {
-    case destinationLocation
-}
-
 class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManagerDelegate, GIDSignInUIDelegate{
     
     var locationManager = CLLocationManager()
@@ -34,7 +30,15 @@ class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManager
     var halfMile = true
     var tenthMile = true
     var distInMeters = 0.0
- 
+    
+    var currentLocation = CLLocation()
+    var endLocation = CLLocation()
+    
+    var markerHolder = GMSMarker()
+    
+    var locationStart = CLLocation()
+    var locationEnd = CLLocation()
+    
     var polyline = GMSPolyline()
     @IBOutlet weak var googleMaps: GMSMapView!
     
@@ -92,7 +96,6 @@ class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManager
             signOutButton.setTitle("Save", for: .normal)
         }
         else if (addKnownAreaButton.currentTitle == "Clear"){
-            //self.drawingPanel.removeFromSuperview()
             self.googleMaps.clear()
             if (destinationLocation.text != "" && signOutButton.currentTitle != "Go" ){
                 markerHolder.map = googleMaps
@@ -122,7 +125,6 @@ class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManager
     @IBAction func onSignOutButtonClick(_ sender: Any) {
         if (signOutButton.currentTitle == "Sign Out"){
             do {
-            //GIDSignIn.sharedInstance().signOut()
             try! Auth.auth().signOut()
             signInButton.isHidden = false
             addKnownAreaButton.isEnabled = false
@@ -204,15 +206,6 @@ class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManager
             }
         }
     }
-    
-    var currentLocation = CLLocation()
-    var endLocation = CLLocation()
-    var locationSelected = Location.destinationLocation
-    
-    var markerHolder = GMSMarker()
-    
-    var locationStart = CLLocation()
-    var locationEnd = CLLocation()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -244,8 +237,8 @@ class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManager
         self.googleMaps.padding = paddingValues
         self.googleMaps.settings.compassButton = true
         self.googleMaps.settings.zoomGestures = true
-        //let camera = GMSCameraPosition(target: (locationManager.location?.coordinate)!, zoom: 15, bearing: 0, viewingAngle: 0)
-        //self.googleMaps.animate(to: camera)
+        let camera = GMSCameraPosition(target: (locationManager.location?.coordinate)!, zoom: 15, bearing: 0, viewingAngle: 0)
+        self.googleMaps.animate(to: camera)
         
     }
     
@@ -411,18 +404,11 @@ class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManager
             }
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func openDestinationLocation(_ sender: UIButton) {
         
         let autoCompleteController = GMSAutocompleteViewController()
         autoCompleteController.delegate = self
-        
-        locationSelected = .destinationLocation
         
         self.present(autoCompleteController, animated: true, completion: nil)
     }
@@ -437,23 +423,15 @@ extension ViewController: GMSAutocompleteViewControllerDelegate {
     
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         
-        // Change map location
-        let camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 16.0
-        )
-        
-        // set coordinate to text
-        if locationSelected == .destinationLocation {
-            googleMaps.clear()
-            locationEnd = CLLocation(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
-            let position = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
-            let marker = GMSMarker(position: position)
-            marker.title = "Destination"
-            marker.map = googleMaps
-            markerHolder = marker
-            signOutButton.setTitle("Find Directions", for: .normal)
-            destinationLocation.text = place.name
-        }
-        
+        let camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 16.0)
+
+        googleMaps.clear()
+        locationEnd = CLLocation(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
+        let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude))
+        marker.map = googleMaps
+        markerHolder = marker
+        signOutButton.setTitle("Find Directions", for: .normal)
+        destinationLocation.text = place.name
         
         self.googleMaps.camera = camera
         self.dismiss(animated: true, completion: nil)
@@ -556,13 +534,6 @@ extension ViewController: GMSAutocompleteViewControllerDelegate {
         newPoly.map = googleMaps
     }
     
-    func updateDirection(i: Int) {
-        let string = directions[i]
-        let range = NSMakeRange(0, string.count)
-        let dir = regex.stringByReplacingMatches(in: string, options: [], range: range, withTemplate: "")
-        directionsText.text = dir
-    }
-    
 }
 
 extension ViewController:NotifyTouchEvents{
@@ -584,16 +555,6 @@ extension ViewController:NotifyTouchEvents{
         self.coordinates.append(coordinate)
         createPolygon()
     }
-}
-
-public extension UISearchBar {
-    
-    public func setTextColor(color: UIColor) {
-        let svs = subviews.flatMap { $0.subviews }
-        guard let tf = (svs.filter { $0 is UITextField }).first as? UITextField else { return }
-        tf.textColor = color
-    }
-    
 }
 
 

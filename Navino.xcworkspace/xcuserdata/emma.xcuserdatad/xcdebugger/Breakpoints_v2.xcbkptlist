@@ -10,27 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Navino/ViewController.swift"
-            timestampString = "555820054.28132"
+            timestampString = "555853890.755272"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "540"
-            endingLineNumber = "540"
-            landmarkName = "createPolygon()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Navino/ViewController.swift"
-            timestampString = "555820054.281413"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "553"
-            endingLineNumber = "553"
+            startingLineNumber = "532"
+            endingLineNumber = "532"
             landmarkName = "addPolygon(drawableLoc:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Navino/ViewController.swift"
-            timestampString = "555820054.281486"
+            timestampString = "555853890.755735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "onSignOutButtonClick(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,89 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Navino/ViewController.swift"
-            timestampString = "555820054.2815551"
+            timestampString = "555853890.756116"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
-            landmarkName = "ViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Navino.ViewController.locationStart.getter : __ObjC.CLLocation"
-                  moduleName = "Navino"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emma/Desktop/Navino/Navino/ViewController.swift"
-                  timestampString = "554913916.151284"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "104">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Navino.ViewController.locationStart.setter : __ObjC.CLLocation"
-                  moduleName = "Navino"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emma/Desktop/Navino/Navino/ViewController.swift"
-                  timestampString = "554913916.158826"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "120">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Navino.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Navino.ViewController"
-                  moduleName = "Navino"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emma/Desktop/Navino/Navino/ViewController.swift"
-                  timestampString = "554913916.166774"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "2260">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Navino.ViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Navino.ViewController&gt;"
-                  moduleName = "Navino"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emma/Desktop/Navino/Navino/ViewController.swift"
-                  timestampString = "554913916.176309"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "2220">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Navino/ViewController.swift"
-            timestampString = "555820054.281624"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "304"
-            endingLineNumber = "304"
+            startingLineNumber = "298"
+            endingLineNumber = "298"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
