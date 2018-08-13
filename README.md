@@ -4,7 +4,9 @@ Navino is a mobile navigation app that allows user to mute directions when they 
 This is done by outlining known areas on the map before starting their directions.
 This repository is the ios appication, android can be found at https://github.com/emmafw/Navino
 
-To install this application xcode must be installed.
+To install this application xcode must be installed. To get xcode the computer must be running High Sierra. If unable 
+to get High Sierra (ex. Windows Partition on laptop) High Sierra can be installed on a virtual machine by following these directions https://www.tactig.com/how-to-install-macos-high-sierra-10-13-on-virtualbox/. Directions are for Windows but work
+on Mac as well. 
 Download the repository and in terminal run pod install to install all dependencies outlined in the podfile.
 The user will need to get a Google Maps API Key from https://developers.google.com/maps/documentation/ios-sdk/get-api-key
 Paste the API key into the AppDelegate for the variable APIKEY.
