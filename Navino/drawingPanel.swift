@@ -1,9 +1,10 @@
 //
-//  drawingPanel.swift
+//  DrawingPanel.swift
 //  Navino
 //
 //  Created by Emma Findlay-Walters on 7/17/18.
-//  Copyright © 2018 Emma Findlay-Walters. All rights reserved.
+//
+// https://github.com/anishparajuli555/FreeHandMapDrawing
 //
 
 import UIKit

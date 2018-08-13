@@ -3,8 +3,9 @@
 //  Navino
 //
 //  Created by Emma Findlay-Walters on 7/10/18.
-//  Copyright © 2018 Emma Findlay-Walters. All rights reserved.
 //
+//
+//  https://github.com/balitax/Google-Maps-Direction
 
 import UIKit
 import GoogleMaps
@@ -75,10 +76,13 @@ class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManager
     @IBOutlet weak var directionsText: UITextView!
     @IBOutlet weak var addKnownAreaButton: UIButton!
     @IBOutlet weak var signOutButton: UIButton!
+    @IBAction func onSignInButtonClick(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
+    }
     @IBAction func onAddKnownAreaClick(_ sender: Any) {
         if (addKnownAreaButton.currentTitle == "Add Known Area"){
             drawingPanel  = {
-                var overlayView = DrawingPanel(frame: self.googleMaps.frame)
+                let overlayView = DrawingPanel(frame: self.googleMaps.frame)
                 overlayView.isUserInteractionEnabled = true
                 overlayView.delegate = self
                 return overlayView
@@ -117,12 +121,17 @@ class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManager
     
     @IBAction func onSignOutButtonClick(_ sender: Any) {
         if (signOutButton.currentTitle == "Sign Out"){
-            GIDSignIn.sharedInstance().signOut()
+            do {
+            //GIDSignIn.sharedInstance().signOut()
+            try! Auth.auth().signOut()
             signInButton.isHidden = false
             addKnownAreaButton.isEnabled = false
             destinationLocation.isEnabled = false
             destinationLocationButton.isEnabled = false
             googleMaps.isUserInteractionEnabled = false
+            } catch{
+                print("Error signing out!")
+            }
         }
         else if (signOutButton.currentTitle == "Find Directions"){
             currentLocation = (locationManager.location)!
@@ -211,13 +220,7 @@ class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManager
         ref = Database.database().reference()
         if(Auth.auth().currentUser == nil){
             signInButton.isHidden = false
-            signOutButton.isEnabled = false
-            addKnownAreaButton.isEnabled = false
-            destinationLocation.isEnabled = false
-            destinationLocationButton.isEnabled = false
-            googleMaps.isUserInteractionEnabled = false
             GIDSignIn.sharedInstance().signIn()
-            signInButton.isHidden = true
         }
         else{
             signInButton.isHidden = true
@@ -241,8 +244,8 @@ class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManager
         self.googleMaps.padding = paddingValues
         self.googleMaps.settings.compassButton = true
         self.googleMaps.settings.zoomGestures = true
-        let camera = GMSCameraPosition(target: (locationManager.location?.coordinate)!, zoom: 15, bearing: 0, viewingAngle: 0)
-        self.googleMaps.animate(to: camera)
+        //let camera = GMSCameraPosition(target: (locationManager.location?.coordinate)!, zoom: 15, bearing: 0, viewingAngle: 0)
+        //self.googleMaps.animate(to: camera)
         
     }
     
@@ -265,6 +268,9 @@ class ViewController: UIViewController , GMSMapViewDelegate ,  CLLocationManager
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if(Auth.auth().currentUser != nil && !signInButton.isHidden){
+            signInButton.isHidden = true
+        }
         if(isMoving && i<latLngs.count){
             currentLocation = locationManager.location!
             let camera = GMSCameraPosition(target: (currentLocation.coordinate), zoom: 18, bearing: 0, viewingAngle: 0)
@@ -589,3 +595,5 @@ public extension UISearchBar {
     }
     
 }
+
+

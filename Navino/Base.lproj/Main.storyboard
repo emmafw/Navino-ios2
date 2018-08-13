@@ -82,10 +82,16 @@
                                     <action selector="onSignOutButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o0W-dO-hat"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCN-5B-om1" customClass="GIDSignInButton">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCN-5B-om1" customClass="GIDSignInButton">
                                 <rect key="frame" x="26" y="267" width="323" height="215"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <action selector="onSignInButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KtN-tg-Quf"/>
+                                </connections>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SYG-wI-uRC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>

@@ -47,22 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             if let error = error {
                 return
             }
-            UserDefaults.standard.set(true, forKey: "signedIn")
-            let user = Auth.auth().currentUser
-            print(user?.email)
-            print(user?.uid)
         }
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        let firebaseAuth = Auth.auth()
-        do {
-            //try firebaseAuth.signOut()
-            try Auth.auth().signOut()
-        } catch let signOutError as NSError {
-            print("Error signing out: %@", signOutError)
-        }
-        UserDefaults.standard.set(false, forKey: "signedIn")
     }
     
     
